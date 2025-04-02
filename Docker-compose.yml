@@ -37,8 +37,8 @@
             depends_on:
                 - elasticsearch
         nginx:
-            image: pablo/nginx
-            container_name: pablonginx
+            image: pablo/tarsbikecraft
+            container_name: tarsbikecraft
             ports:
                - 8080:80
            
