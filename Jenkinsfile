@@ -8,7 +8,7 @@ pipeline {
             }
             
         }
-        stage('Construir imagem do frontend){
+        stage('Construir imagem do frontend'){
             steps {
                 echo 'Construir imagem do frontend - pablo/tarsbikecraft'
                 sh 'cd frontend'
