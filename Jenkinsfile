@@ -24,7 +24,7 @@ pipeline {
                 echo 'Executano docker-compose container Elasticsearch e Kibana'
                 sh 'docker-compose up -d'
                 sh 'docker ps'
-                sh 'sleep 20'
+                sh 'sleep 21'
             }
         }
 
