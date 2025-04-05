@@ -11,7 +11,7 @@ pipeline {
         stage('Construir imagem do frontend'){
             steps {
                 echo 'Construir imagem do frontend - pablo/tarsbikecraft'
-                dir(frontend){
+                dir('frontend'){
                      sh 'ls -la'
                      sh 'docker build -t pablo/tarsbikecraft .'
                      echo 'verificar se imagem foi criada'
