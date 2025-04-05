@@ -22,12 +22,13 @@ pipeline {
         stage('Subir Elasticsearch e Kibana'){
             steps{
                 echo 'Executano docker-compose container Elasticsearch e Kibana'
-                dir('..'){
-                    sh 'ls -la'
-                    sh 'docker-compose up -d'
-                    sh 'docker ps'
-                    sh 'sleep 21'
-                }
+                   dir('..'){
+                        
+                        sh 'ls -la'
+                   }
+                
+                    
+              
             }
         }
 
