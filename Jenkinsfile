@@ -19,11 +19,12 @@ pipeline {
                 }
             }
         }
-        stage('Executar container para  verificação de teste...'){
+        stage('Subir Elasticsearch e Kibana'){
             steps{
-                echo 'Executar container...'
-                sh 'docker run --name tartarsbikecraft -p 8181:80 pablo/tarsbikecraft -d'
+                echo 'Executano docker-compose container Elasticsearch e Kibana'
+                sh 'docker-compose up -d'
                 sh 'docker ps'
+                sh 'sleep 20'
             }
         }
 
