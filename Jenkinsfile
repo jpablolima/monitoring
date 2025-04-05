@@ -11,8 +11,12 @@ pipeline {
         stage('Construir imagem do frontend'){
             steps {
                 echo 'Construir imagem do frontend - pablo/tarsbikecraft'
-                sh 'ls -la'
-              
+                dir(frontend){
+                     sh 'ls -la'
+                     sh 'docker build -t pablo/tarsbikecraft .'
+                }
+                    echo 'verificar se imagem foi criada'
+                    sh ''docker images | grep pablo/tarsbikecraft || echo "Imagem não encontrada"''
             }
         }
     }
