@@ -1,9 +1,10 @@
 pipeline {
     agent any
     stages {
-        stage('step1' ){
+        stage('Verificar a instalação do Docker' ){
             steps {
-                echo 'step 1'
+                echo 'Verificar a instalação do Docker'
+                sh 'docker --version'
             }
             
         }

@@ -2,7 +2,7 @@
 
 
 filebeat modules enable nginx
-# filebeat setup
+filebeat setup
 service filebeat start
 
 nginx -g "daemon off;"
