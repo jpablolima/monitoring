@@ -19,5 +19,12 @@ pipeline {
                 }
             }
         }
+        stage('Executar container para  verificação de teste...')
+            steps{
+                echo 'Executar container...'
+                sh 'docker run --name tartarsbikecraft -p 8181:80 pablo/tarsbikecraft -d'
+                sh 'docker ps'
+            }
+
     }
 }
