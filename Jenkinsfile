@@ -12,18 +12,15 @@ pipeline {
             steps {
                 echo 'Construir imagem de monitoramento - Elasticsearch e Kibana'
 
-                     sh 'ls -la'
-                    //  sh 'docker build -t pablo/tarsbikecraft .'
-                    //  echo 'verificar se imagem foi criada'
-                    //  sh 'docker images | grep pablo/tarsbikecraft || echo "Imagem não encontrada"'
+                    echo "vericiar arquivos"
+                    sh 'ls -la'
+                    echo "Construir imagen do Elasticsearch e Kibana"
+                    sh "docker-compose up -d"
                 
             }
         }
        
                 
-                    
-              
+            
     }
-
-
 }
