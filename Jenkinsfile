@@ -10,27 +10,19 @@ pipeline {
         }
         stage('Construir imagem do frontend'){
             steps {
-                echo 'Construir imagem do frontend - pablo/tarsbikecraft'
-                dir('frontend'){
+                echo 'Construir imagem de monitoramento - Elasticsearch e Kibana'
+
                      sh 'ls -la'
-                     sh 'docker build -t pablo/tarsbikecraft .'
-                     echo 'verificar se imagem foi criada'
-                     sh 'docker images | grep pablo/tarsbikecraft || echo "Imagem não encontrada"'
-                }
+                    //  sh 'docker build -t pablo/tarsbikecraft .'
+                    //  echo 'verificar se imagem foi criada'
+                    //  sh 'docker images | grep pablo/tarsbikecraft || echo "Imagem não encontrada"'
+                
             }
         }
-        stage('Subir Elasticsearch e Kibana'){
-            steps{
-                echo 'Executano docker-compose container Elasticsearch e Kibana'
-                   dir('..'){
-                        
-                        sh 'ls -la'
-                   }
+       
                 
                     
               
-            }
-        }
-
-    }
 }
+
+
