@@ -8,7 +8,15 @@ pipeline {
             }
             
         }
-        stage('Construir imagem do frontend'){
+        stage("Criação do diretório do Elasticsearch ") {
+            steps{
+                echo 'Criação e configuração do diretório do Elasticsearch '
+                sh 'sudo chown -R 1000:1000 /opt/elasticsearch/data'
+                sh 'sudo chmod -R 775 /opt/elasticsearch/data'
+            }
+
+        }
+        stage('Construir imagem de monitoramento - Elasticsearch e Kibana'){
             steps {
                 echo 'Construir imagem de monitoramento - Elasticsearch e Kibana'
 
@@ -19,8 +27,7 @@ pipeline {
                 
             }
         }
-       
+     }
+}      
                 
             
-    }
-}
