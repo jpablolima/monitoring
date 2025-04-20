@@ -15,5 +15,11 @@ pipeline {
                 sh 'cp -R . /var/www/html'
             }
         }
+        stage('Restart do Nginx') {
+            steps {
+                sh 'systemctl restart nginx'
+                sh 'systemctl status nginx'
+            }
+        }
     }
 }
