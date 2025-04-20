@@ -11,6 +11,7 @@ pipeline {
         stage('Deploy do Front-End'){
             steps {
                 echo 'Vefiricando diretório'
+                sh 'sudo cp -R --exclude=".git" . /var/www/html'
                 sh 'ls -la'
                 sh 'cp -R . /var/www/html'
             }
