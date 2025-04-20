@@ -12,9 +12,9 @@ pipeline {
             steps {
                 echo 'Vefiricando diretório'
                 sh 'ls -la'
-                sh 'sudo cp -R --exclude=".git" . /var/www/html'
+                // sh 'sudo cp -R --exclude=".git" . /var/www/html'
 
-                // sh 'cp -R . /var/www/html'
+                sh 'cp -R . /var/www/html'
             }
         }
         stage('Restart do Nginx') {
