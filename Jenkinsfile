@@ -17,8 +17,8 @@ pipeline {
         }
         stage('Restart do Nginx') {
             steps {
-                sh 'systemctl restart nginx'
-                sh 'systemctl status nginx'
+                sh 'sudo systemctl restart nginx'
+                sh 'sudo systemctl status nginx'
             }
         }
     }
